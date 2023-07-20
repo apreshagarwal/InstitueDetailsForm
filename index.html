@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form with Legends</title>
+  <style>
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form action="#" id="instituteDetailsForm" onsubmit="return validateForm()">
+    <fieldset>
+      <legend>Institute Details</legend>
+      <label for="instituteName">Institute Name:</label>
+      <input type="text" id="instituteName" name="instituteName" maxlength="200" required>
+      <span class="error-message" id="instituteNameError"></span>
+
+      <br>
+
+      <label for="instituteType">Institute Type:</label>
+      <select id="instituteType" name="instituteType" required>
+        <option value="">Select Institute Type</option>
+        <option value="Central Government">Central Government</option>
+        <option value="State Government">State Government</option>
+        <option value="Private">Private</option>
+        <option value="Joint Venture">Joint Venture</option>
+      </select>
+      <span class="error-message" id="instituteTypeError"></span>
+
+      <br>
+
+      <label for="registeredWithGovt">Registered with any State/Central Govt auth:</label>
+      <select id="registeredWithGovt" name="registeredWithGovt" required>
+        <option value="">Select an option</option>
+        <option value="YES">YES</option>
+        <option value="NO">NO</option>
+      </select>
+      <span class="error-message" id="registeredWithGovtError"></span>
+
+      <br>
+
+      <label for="panNumber">PAN No.:</label>
+      <input type="text" id="panNumber" name="panNumber" maxlength="10">
+      <span class="error-message" id="panNumberError"></span>
+
+      <br>
+
+      <label for="tanNumber">TAN No.:</label>
+      <input type="text" id="tanNumber" name="tanNumber" maxlength="10">
+      <span class="error-message" id="tanNumberError"></span>
+
+      <!-- Other fields can be added here -->
+    </fieldset>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script src="./validation.js"></script>
+</body>
+</html>
